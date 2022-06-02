@@ -23,9 +23,9 @@ const AgregarProducto = (props) => {
       setError(false);
       //crear un objeto
       const productoNuevo = {
-        nombreProducto: nombreProducto,
-        precioProducto: precioProducto,
-        categoria: categoria,
+        nombreProducto,
+        precioProducto,
+        categoria,
       };
       //console.log(productoNuevo)
       //enviar el objeto producto a la api POST
