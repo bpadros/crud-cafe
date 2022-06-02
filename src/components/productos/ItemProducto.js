@@ -1,10 +1,49 @@
 import React from 'react';
 import { ListGroup, Button } from 'react-bootstrap';
+import Swal from "sweetalert2"
 
 const ItemProducto = (props) => {
-
-  const eliminarProducto = () =>{
+const eliminarProducto = () =>{
     console.log(props.producto.id)
+    Swal.fire({
+      title: 'Esta seguro de eliminar el producto?',
+      text: "No se puede recuperar un producto elminiado",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'borrar',
+      cancelButtonText: "cancelar"
+    }).then(async(result) => {
+      if (result.isConfirmed) {
+        //pedir a la api borrar un producto
+        try{
+          const URL = process.env.REACT_APP_API_URL+ "/"+props.producto.id
+
+          const respuesta = await fetch(URL, {
+            method:"DELETE",
+            headers: {
+              "Content-Type" : "application/json"
+            }
+          })
+        console.log(respuesta)
+        if(respuesta.status ===200){
+           //si la api borro el producto muestro el msj
+        Swal.fire(
+          'Producto eliminado!',
+          'El producto fue correctamente eliminado',
+          'success'
+        )
+        //llamar a consultarAPI 
+        props.consultarAPI()
+        }
+        }catch(error){
+          console.log(error)
+        }
+
+       
+      }
+    })
   }
     return (
         <ListGroup.Item className="d-flex justify-content-between">

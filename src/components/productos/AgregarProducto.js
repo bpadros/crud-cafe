@@ -23,9 +23,9 @@ const AgregarProducto = (props) => {
       setError(false);
       //crear un objeto
       const productoNuevo = {
-        nombreProducto,
-        precioProducto,
-        categoria,
+        nombreProducto:nombreProducto,
+        precioProducto:precioProducto,
+        categoria:categoria,
       };
       //console.log(productoNuevo)
       //enviar el objeto producto a la api POST
@@ -40,6 +40,7 @@ const AgregarProducto = (props) => {
         const respuesta = await fetch(URL, parametros);
         // console.log(respuesta);
         if (respuesta.status === 201) {
+          console.log("exitosa")
           // mostrar al usuario un mensaje de operacion exitosa
           Swal.fire(
             "Producto creado",

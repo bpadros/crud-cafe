@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Inicio from "./components/pages/Inicio";
 import ListaProductos from "./components/productos/ListaProductos"
 import AgregarProducto from "./components/productos/AgregarProducto"
-import EditarProducto from "./components/productos/EditarProducto"
+// import EditarProducto from "./components/productos/EditarProducto"
 import {useState,useEffect} from "react"
 
 function App() {
@@ -39,9 +39,9 @@ return (
       <Navigation></Navigation>
       <Routes>
         <Route exact path="/" element={<Inicio></Inicio>}></Route>
-        <Route exact path="/productos" element={<ListaProductos productos={productos}></ListaProductos>}></Route>
+        <Route exact path="/productos" element={<ListaProductos productos={productos} consultarAPI={consultarAPI}></ListaProductos>}></Route>
         <Route exact path="/productos/nuevo" element={<AgregarProducto consultarAPI={consultarAPI}></AgregarProducto>}></Route>
-        <Route exact path="/productos/editar" element={<EditarProducto></EditarProducto>}></Route>
+        {/* <Route exact path="/productos/editar" element={<EditarProducto></EditarProducto>}></Route> */}
         <Route exact path="*" element={<Error404></Error404>}></Route>
       </Routes>
       <Footer></Footer>
