@@ -1,6 +1,7 @@
 import React from 'react';
 import { ListGroup, Button } from 'react-bootstrap';
 import Swal from "sweetalert2"
+import {Link} from "react-router-dom"
 
 const ItemProducto = (props) => {
 const eliminarProducto = () =>{
@@ -51,8 +52,8 @@ const eliminarProducto = () =>{
           {props.producto.nombreProducto}
           <span className='fw-bolder'>-Precio:$ {props.producto.precioProducto}</span>
         </p>
-        <div>  
-        <Button variant="warning">Editar</Button>
+        <div>        
+          <Link to={`/productos/editar/${props.producto.id}`} className="btn btn-warning me-2">Editar</Link>
           <Button variant="danger" onClick={()=> eliminarProducto()}>Borrar</Button>
         </div>
       </ListGroup.Item>

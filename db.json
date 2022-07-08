@@ -1,12 +1,6 @@
 {
   "productos": [
     {
-      "id": 3,
-      "nombreProducto": "Medialuna x unidad",
-      "precioProducto": "35",
-      "categoria": "dulce"
-    },
-    {
       "nombreProducto": "cafe",
       "precioProducto": "50",
       "categoria": "dulce",
@@ -17,6 +11,24 @@
       "precioProducto": "135",
       "categoria": "bebida-fria",
       "id": 5
+    },
+    {
+      "nombreProducto": "mate",
+      "precioProducto": "55",
+      "categoria": "bebida-caliente",
+      "id": 7
+    },
+    {
+      "nombreProducto": "te",
+      "precioProducto": "32",
+      "categoria": "bebida-caliente",
+      "id": 8
+    },
+    {
+      "nombreProducto": "cafe",
+      "precioProducto": "49",
+      "categoria": "bebida-caliente",
+      "id": 9
     }
   ]
 }
