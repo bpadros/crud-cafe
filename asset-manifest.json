@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/crud-cafe/static/css/main.38be36b0.css",
+    "main.js": "/crud-cafe/static/js/main.3d9ec461.js",
+    "static/js/787.a8d23205.chunk.js": "/crud-cafe/static/js/787.a8d23205.chunk.js",
+    "static/media/coffee.jpg": "/crud-cafe/static/media/coffee.d8d985b916c871179812.jpg",
+    "static/media/error-404.jpg": "/crud-cafe/static/media/error-404.1245bf2408be06419647.jpg",
+    "index.html": "/crud-cafe/index.html",
+    "main.38be36b0.css.map": "/crud-cafe/static/css/main.38be36b0.css.map",
+    "main.3d9ec461.js.map": "/crud-cafe/static/js/main.3d9ec461.js.map",
+    "787.a8d23205.chunk.js.map": "/crud-cafe/static/js/787.a8d23205.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.38be36b0.css",
+    "static/js/main.3d9ec461.js"
+  ]
+}
